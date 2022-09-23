@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://assets/TrueType (.ttf)/Blazma-Italic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fondo futbol.jpg" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 553, 311 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 1 )
+Button/styles/hover = SubResource( 2 )

@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://proyectos/escenas/jugador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://proyectos/escenas/balong.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PhysicsMaterial" id=5]
+bounce = 0.85
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 121, 487.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 759, 102.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 94.375, 462 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 776.5, 83.5 )
+
+[node name="Main" type="Node2D"]
+
+[node name="Balong" parent="." instance=ExtResource( 2 )]
+position = Vector2( 498, 278 )
+mass = 0.01
+physics_material_override = SubResource( 5 )
+linear_velocity = Vector2( 0, 5000 )
+linear_damp = 0.75
+angular_damp = -0.5
+
+[node name="Muro izquierda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro izquierda"]
+position = Vector2( -124, 287.5 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Muro abajo2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Muro abajo2"]
+position = Vector2( 488, 711 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1119.63, 284 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 491.5, -92 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Abeja" parent="." instance=ExtResource( 1 )]
+position = Vector2( 526, 128 )
+
+[node name="Abeja2" parent="." instance=ExtResource( 1 )]
+input_index = 2
