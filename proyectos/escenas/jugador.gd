@@ -5,8 +5,8 @@ onready var anim_player = $AnimationPlayer
 
 var velocity = Vector2()
 var GRAVITY = 100
-var SPEED = 500
-var SPEEDY = 500
+var SPEED = 600
+var SPEEDY = 600
 export (int, 0, 200) var push = 100
 
 export (int) var input_index = 1
