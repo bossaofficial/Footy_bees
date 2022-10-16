@@ -10,8 +10,8 @@ func _ready():
 	abandonar.connect("pressed",self,"_on_abandonar_pressed")
 # Se definen las funciones llamadas anteriormente
 func _on_continuar_pressed():
-	get_tree().paused = false
 	visible = false
+	get_tree().paused = visible
 func _on_configuracion_pressed():
 	get_tree().change_scene("res://proyectos/escenas/Main Menu/mainmenu.tscn")
 	get_tree().paused = false

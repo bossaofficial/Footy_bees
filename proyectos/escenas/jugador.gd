@@ -35,6 +35,7 @@ func _physics_process(delta):
 	var aguijonear_input = Input.is_action_pressed("aguijonear"+str(input_index))
 	if aguijonear_input:
 		playback.travel("tomar_pelota")
+
 	else:
 		playback.travel("idle")
 	
@@ -42,9 +43,8 @@ func _physics_process(delta):
 		var collision = get_slide_collision(i)
 		var ball:= collision.collider as Ball
 		if ball:
-			ball.apply_central_impulse((-collision.normal + Vector2.UP*0.5)*velocity.length()*KICK_IMPULSE/1000)
-		
-			
+			ball.apply_impulse((-collision.normal)*(velocity.length()+10)*KICK_IMPULSE/1000,(ball.position-global_position)/(ball.position-global_position).length())
+
 # Animaciones
 
 

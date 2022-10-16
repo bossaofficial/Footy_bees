@@ -5,9 +5,9 @@ export var altura_maxima = -70
 var v_max = 500
 onready var initial_y = global_position.y
 func _physics_process(delta):
-	if linear_velocity.y*linear_velocity.y + linear_velocity.x*linear_velocity.x > v_max*v_max:
-		linear_velocity.y = (linear_velocity.y)*v_max/sqrt(linear_velocity.y*linear_velocity.y + linear_velocity.x*linear_velocity.x)
-		linear_velocity.x = (linear_velocity.x)*v_max/sqrt(linear_velocity.y*linear_velocity.y + linear_velocity.x*linear_velocity.x)
+	if linear_velocity.length() > v_max*v_max:
+		linear_velocity.y = (linear_velocity.y)*v_max/linear_velocity.length()
+		linear_velocity.x = (linear_velocity.x)*v_max/linear_velocity.length()
 	if global_position.y > altura_minima:
 		global_position.y = altura_maxima + 1
 	elif global_position.y < altura_maxima:
