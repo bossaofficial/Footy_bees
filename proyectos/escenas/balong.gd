@@ -17,3 +17,7 @@ func _physics_process(delta):
 	var aguijonear_input1 = Input.is_action_pressed("aguijonear1")
 	var aguijonear_input2 = Input.is_action_pressed("aguijonear2")
 	#Contacto del balong
+	if get_collision_layer_bit(8):
+		print("a")
+	if get_collision_layer_bit(4):
+		print("a")

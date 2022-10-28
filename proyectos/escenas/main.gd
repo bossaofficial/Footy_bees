@@ -25,6 +25,7 @@ func _process(delta):
 	if (abeja1.global_position+Vector2(0,-100)-balong.global_position).length() < 100 and aguijonear_input1:
 		balong.global_position = abeja1.global_position + Vector2(0,-150)
 		balong.linear_velocity = abeja1.velocity*2
+		abeja1.velocity.length() <= 100
 	if (abeja2.global_position+Vector2(0,-100)-balong.global_position).length() < 100 and aguijonear_input2:
 		balong.global_position = abeja2.global_position + Vector2(0,-150)
 		balong.linear_velocity = abeja2.velocity*2

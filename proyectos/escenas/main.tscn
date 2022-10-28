@@ -4,7 +4,7 @@
 [ext_resource path="res://proyectos/escenas/balong.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Fondo este si que si.jpg" type="Texture" id=3]
 [ext_resource path="res://proyectos/escenas/balong.gd" type="Script" id=4]
-[ext_resource path="res://proyectos/escenas/arco.tscn" type="PackedScene" id=5]
+[ext_resource path="res://proyectos/escenas/Arco.tscn" type="PackedScene" id=5]
 [ext_resource path="res://proyectos/escenas/main.gd" type="Script" id=6]
 
 [sub_resource type="PhysicsMaterial" id=5]
@@ -70,15 +70,6 @@ anchor_mode = 0
 current = true
 zoom = Vector2( 1.3, 1.3 )
 
-[node name="StaticBody2D" parent="Camera2D" instance=ExtResource( 5 )]
-position = Vector2( 1260, 374 )
-frequency = 5
-
-[node name="StaticBody2D" parent="Camera2D/StaticBody2D" instance=ExtResource( 5 )]
-position = Vector2( -1193, 40 )
-scale = Vector2( -1, 1 )
-frequency = 5
-
 [node name="Abeja1" parent="." instance=ExtResource( 1 )]
 position = Vector2( 985, 517 )
 
@@ -95,3 +86,9 @@ input_index = 3
 position = Vector2( 305, 187 )
 scale = Vector2( -1, 1 )
 input_index = 4
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 378 )
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1285, 378 )

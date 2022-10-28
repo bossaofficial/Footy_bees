@@ -6,6 +6,7 @@
 radius = 57.1402
 
 [node name="Balong" type="RigidBody2D"]
+collision_layer = 9
 mass = 65535.0
 gravity_scale = 0.0
 
@@ -16,3 +17,5 @@ shape = SubResource( 1 )
 position = Vector2( 0, 9.53674e-07 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

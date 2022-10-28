@@ -15,7 +15,7 @@ anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -1459, -81 )
 script = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Goles2" type="Label" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_vertical = 7
