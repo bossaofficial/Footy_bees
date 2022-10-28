@@ -45,11 +45,11 @@ func _physics_process(delta):
 		if ball:
 			ball.apply_impulse((-collision.normal)*(velocity.length()+10)*KICK_IMPULSE/1000,(ball.position-global_position)/(ball.position-global_position).length())
 
-# Animaciones
-
-
+#Color abejita
 func _ready():
-	pass # Replace with function body.
-
+	var sprite
+	sprite=$Pivot/Sprite
+	if input_index==1 or input_index==3:
+		sprite.modulate= Color.pink
 
 
