@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://proyectos/escenas/jugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://proyectos/escenas/balong.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://proyectos/escenas/balong.gd" type="Script" id=4]
 [ext_resource path="res://proyectos/escenas/Arco.tscn" type="PackedScene" id=5]
 [ext_resource path="res://proyectos/escenas/main.gd" type="Script" id=6]
+[ext_resource path="res://proyectos/escenas/marcador.tscn" type="PackedScene" id=7]
 
 [sub_resource type="PhysicsMaterial" id=5]
 bounce = 0.85
@@ -87,8 +88,11 @@ position = Vector2( 305, 187 )
 scale = Vector2( -1, 1 )
 input_index = 4
 
-[node name="StaticBody2D" parent="." instance=ExtResource( 5 )]
+[node name="Arco1" parent="." instance=ExtResource( 5 )]
 position = Vector2( 40, 378 )
 
-[node name="StaticBody2D2" parent="." instance=ExtResource( 5 )]
+[node name="Arco2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1285, 378 )
+input_index = 2
+
+[node name="Marcador" parent="." instance=ExtResource( 7 )]

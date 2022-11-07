@@ -1,8 +1,6 @@
 extends Area2D
 
-onready var marcador_visita = $"CanvasLayer/marcador visita"
-onready var marcador_local = $"CanvasLayer/marcador local"
-
+signal goal
 
 export var frequency = 1
 export var amplitude = 100
@@ -25,9 +23,4 @@ func _physics_process(delta):
 
 
 func _on_StaticBody2D_body_entered(body):
-	if input_index == 1:
-		marcador_local.goles1 += 1
-		print("A") # Replace with function body.
-	if input_index == 2:
-		marcador_visita.goles2 += 1
-		print("B")
+	emit_signal("goal", input_index)

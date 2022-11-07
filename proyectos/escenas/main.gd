@@ -13,7 +13,8 @@ onready var abeja4 = $Abeja4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Arco1.connect("goal", $Marcador, "goal")
+	$Arco2.connect("goal", $Marcador, "goal")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
