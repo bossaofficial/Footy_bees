@@ -1,6 +1,6 @@
 extends Area2D
 
-signal goal
+signal goal(index)
 
 export var frequency = 1
 export var amplitude = 100
