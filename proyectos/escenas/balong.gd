@@ -4,6 +4,7 @@ export var altura_minima = 844
 export var altura_maxima = -70
 var v_max = 900
 onready var initial_y = global_position.y
+onready var collision_shape_2d = $CollisionShape2D
 
 
 func _physics_process(delta):
@@ -21,3 +22,7 @@ func _physics_process(delta):
 		print("a")
 	if get_collision_layer_bit(4):
 		print("a")
+
+func enable_collision(value):
+	collision_shape_2d.disabled = not value
+	

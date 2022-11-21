@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://proyectos/escenas/jugador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://proyectos/escenas/balong.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Fondo este si que si.jpg" type="Texture" id=3]
-[ext_resource path="res://proyectos/escenas/balong.gd" type="Script" id=4]
 [ext_resource path="res://proyectos/escenas/Arco.tscn" type="PackedScene" id=5]
 [ext_resource path="res://proyectos/escenas/main.gd" type="Script" id=6]
 [ext_resource path="res://proyectos/escenas/marcador.tscn" type="PackedScene" id=7]
-[ext_resource path="res://proyectos/escenas/GoalAnimation.tscn" type="PackedScene" id=8]
+[ext_resource path="res://proyectos/escenas/pausemenu.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PhysicsMaterial" id=5]
 bounce = 0.85
@@ -32,7 +31,6 @@ linear_velocity = Vector2( 0, 500 )
 linear_damp = 0.75
 angular_damp = -0.5
 applied_force = Vector2( 0, 5 )
-script = ExtResource( 4 )
 
 [node name="Muro derecha" type="StaticBody2D" parent="."]
 position = Vector2( 308, 106 )
@@ -94,8 +92,12 @@ position = Vector2( 40, 378 )
 
 [node name="Arco2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1285, 378 )
+scale = Vector2( -1, 1 )
 input_index = 2
 
 [node name="Marcador" parent="." instance=ExtResource( 7 )]
 
-[node name="GoalAnimation" parent="." instance=ExtResource( 8 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 9 )]
+visible = false

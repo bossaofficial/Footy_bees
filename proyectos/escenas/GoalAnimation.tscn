@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=2]
-
-[ext_resource path="res://fondo negro fixita.png" type="Texture" id=1]
+[gd_scene load_steps=4 format=2]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -66,8 +64,3 @@ root_node = NodePath("../Pivot")
 anims/RESET = SubResource( 1 )
 anims/idle = SubResource( 2 )
 anims/tomar_pelota = SubResource( 3 )
-
-[node name="FondoNegroFixita" type="Sprite" parent="AnimationPlayer"]
-visible = false
-position = Vector2( 468, 314 )
-texture = ExtResource( 1 )

@@ -1,9 +1,41 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://proyectos/escenas/marcador_label.tscn" type="PackedScene" id=1]
 [ext_resource path="res://proyectos/escenas/marcador.gd" type="Script" id=2]
 
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
 [node name="Marcador" type="CanvasLayer"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="Marcador" parent="." instance=ExtResource( 1 )]
@@ -16,3 +48,13 @@ margin_bottom = 0.0
 
 [node name="Marcador2" parent="." instance=ExtResource( 1 )]
 margin_right = 104.0
+
+[node name="Gol" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="nimationPlayer" type="AnimationPlayer" parent="Gol"]
+pause_mode = 2
+anims/RESET = SubResource( 1 )
+anims/fade_out = SubResource( 2 )

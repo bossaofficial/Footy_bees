@@ -1,6 +1,6 @@
 extends KinematicBody2D
 onready var pivot = $Pivot
-onready var sprite = $Sprite
+onready var sprite = $Pivot/Sprite
 onready var anim_player = $AnimationPlayer
 onready var anim_tree = $AnimationTree
 onready var playback = anim_tree.get("parameters/playback")

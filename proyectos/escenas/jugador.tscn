@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://proyectos/escenas/jugador.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bee-Sheet.png" type="Texture" id=2]
-[ext_resource path="res://proyectos/escenas/pausemenu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.0
@@ -92,11 +91,6 @@ shape = SubResource( 1 )
 position = Vector2( -1, -25 )
 texture = ExtResource( 2 )
 hframes = 16
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Pivot")

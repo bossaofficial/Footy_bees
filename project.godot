@@ -24,6 +24,10 @@ config/name="Footy Bees by 360Studios"
 run/main_scene="res://proyectos/escenas/Main Menu/mainmenu.tscn"
 config/icon="res://assets/icon.png"
 
+[autoload]
+
+GolesAlmacenados="*res://proyectos/escenas/golesalmacenados.tscn"
+
 [display]
 
 window/size/test_width=1280
