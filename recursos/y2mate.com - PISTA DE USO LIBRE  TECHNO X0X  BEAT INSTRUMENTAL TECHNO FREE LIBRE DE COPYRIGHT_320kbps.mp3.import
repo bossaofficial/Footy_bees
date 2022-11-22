@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/y2mate.com - PISTA DE USO LIBRE  TECHNO X0X  BEAT INSTRUMENTAL TECHNO FREE LIBRE DE COPYRIGHT_320kbps.mp3-9dc12e9b1afc1a1d68eeb951b55ba2fe.mp3str"
+
+[deps]
+
+source_file="res://recursos/y2mate.com - PISTA DE USO LIBRE  TECHNO X0X  BEAT INSTRUMENTAL TECHNO FREE LIBRE DE COPYRIGHT_320kbps.mp3"
+dest_files=[ "res://.import/y2mate.com - PISTA DE USO LIBRE  TECHNO X0X  BEAT INSTRUMENTAL TECHNO FREE LIBRE DE COPYRIGHT_320kbps.mp3-9dc12e9b1afc1a1d68eeb951b55ba2fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

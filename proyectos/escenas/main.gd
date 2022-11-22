@@ -17,7 +17,10 @@ func _ready():
 	marcador.connect("goal_animation",self,"on_goal_animation")
 	$Arco1.connect("goal", self, "goal")
 	$Arco2.connect("goal", self, "goal")
-
+	if GolesAlmacenados.local==5:
+		get_tree().change_scene("res://proyectos/escenas/ganavisita.tscn")
+	if GolesAlmacenados.visita==5:
+		get_tree().change_scene("res://proyectos/escenas/ganalocal.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -44,9 +47,12 @@ func _physics_process(delta):
 func goal(index):
 	if index==1:
 		GolesAlmacenados.local+=1
+		get_tree().change_scene("res://proyectos/escenas/goalscene.tscn")
 	if index==2:
 		GolesAlmacenados.visita+=1
-	get_tree().change_scene("res://proyectos/escenas/goalscene.tscn")
+		get_tree().change_scene("res://proyectos/escenas/goalscene.tscn")
+	
+	
 
 func on_goal_animation():
 	reset(0)
@@ -69,4 +75,5 @@ func reset(_index):
 	balong.linear_velocity= Vector2(0,500)
 	yield(marcador.nimation_player, "animation_finished")
 	get_tree().paused = false
+	
 	
