@@ -14,7 +14,8 @@ func _on_salir_pressed():
 	get_tree().quit()
 
 func _on_creditos_pressed():
-	print(":o")
+	get_tree().change_scene("res://proyectos/escenas/creditos1.tscn")
+
 
 func _on_jugar_pressed():
 	get_tree().change_scene("res://proyectos/escenas/main.tscn")
