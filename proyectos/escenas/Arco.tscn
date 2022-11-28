@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/arcoestupendo.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14, 130 )
+extents = Vector2( 3.34641, 95.2932 )
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 0
@@ -18,8 +18,8 @@ scale = Vector2( 1, 1.6 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.90735e-06, 5.96047e-08 )
-rotation = 0.139626
+position = Vector2( -7.31596, -3.87938 )
+rotation = 0.174533
 scale = Vector2( 1, 0.8 )
 shape = SubResource( 1 )
 

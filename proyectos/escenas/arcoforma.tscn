@@ -7,7 +7,7 @@
 extents = Vector2( 43.456, 1191.52 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 109.813, 10 )
+extents = Vector2( 114.906, 17.5 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 
@@ -37,7 +37,7 @@ position = Vector2( 0, 128 )
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="muro de abajo"]
-position = Vector2( -8, -16 )
+position = Vector2( -10.0374, -18 )
 scale = Vector2( 0.4, 0.4 )
 shape = SubResource( 2 )
 __meta__ = {
@@ -49,8 +49,8 @@ position = Vector2( 104, 24 )
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="muro de arriba"]
-position = Vector2( -112, -136 )
-scale = Vector2( 0.4, 1 )
+position = Vector2( -104, -136 )
+scale = Vector2( 0.35, 0.4 )
 shape = SubResource( 2 )
 __meta__ = {
 "_edit_group_": true

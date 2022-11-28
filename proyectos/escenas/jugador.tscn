@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://proyectos/escenas/jugador.gd" type="Script" id=1]
 [ext_resource path="res://assets/Bee-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/TrueType (.ttf)/Blazma-Italic.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.0
@@ -77,6 +78,12 @@ start_node = "idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
+[sub_resource type="DynamicFont" id=11]
+size = 80
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
 [node name="Abeja" type="KinematicBody2D"]
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
@@ -103,3 +110,23 @@ tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -73.0
+margin_top = -187.0
+margin_right = 69.0
+margin_bottom = -95.0
+custom_colors/font_color = Color( 1, 0.984314, 0, 1 )
+custom_fonts/font = SubResource( 11 )
+align = 1
+
+[node name="Tiempo_balong" type="Timer" parent="."]
+process_mode = 0
+wait_time = 2.0
+one_shot = true
+
+[node name="Cooldown" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="Tween" type="Tween" parent="."]

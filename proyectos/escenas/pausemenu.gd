@@ -26,4 +26,9 @@ func _input(event):
 func _on_resume_pressed():
 	get_tree().paused = false
 	visible = not true
-
+	
+#Modificar musicona
+func _on_music_value_changed(value: float):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"),
+		linear2db(value)
+	)

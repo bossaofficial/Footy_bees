@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://recursos/tema.tres" type="Theme" id=1]
 [ext_resource path="res://assets/TrueType (.ttf)/Blazma-Italic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://proyectos/escenas/pausemenu.gd" type="Script" id=3]
+[ext_resource path="res://recursos/y2mate.com - PISTA DE USO LIBRE  TECHNO X0X  BEAT INSTRUMENTAL TECHNO FREE LIBRE DE COPYRIGHT_320kbps.mp3" type="AudioStream" id=4]
 
 [sub_resource type="Theme" id=1]
 
@@ -14,8 +15,8 @@ font_data = ExtResource( 2 )
 
 [node name="PauseMenu" type="MarginContainer"]
 pause_mode = 2
-margin_right = 1024.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 theme = SubResource( 1 )
 script = ExtResource( 3 )
 
@@ -26,28 +27,50 @@ theme = ExtResource( 1 )
 alignment = 1
 
 [node name="Pausa" type="Label" parent="VBoxContainer"]
-margin_top = 168.0
+margin_top = 133.0
 margin_right = 1024.0
-margin_bottom = 260.0
+margin_bottom = 225.0
 custom_colors/font_color = Color( 1, 0.984314, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Pausa"
 align = 1
 
 [node name="Continuar" type="Button" parent="VBoxContainer"]
-margin_top = 264.0
+margin_top = 229.0
 margin_right = 1024.0
-margin_bottom = 317.0
+margin_bottom = 282.0
 text = "Continuar"
 
 [node name="Configuracion" type="Button" parent="VBoxContainer"]
-margin_top = 321.0
+margin_top = 286.0
 margin_right = 1024.0
-margin_bottom = 374.0
-text = "Configuración"
+margin_bottom = 339.0
+text = "Menú principal"
 
 [node name="Abandonar" type="Button" parent="VBoxContainer"]
-margin_top = 378.0
+margin_top = 343.0
 margin_right = 1024.0
-margin_bottom = 431.0
+margin_bottom = 396.0
 text = "Abandonar"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_top = 400.0
+margin_right = 1024.0
+margin_bottom = 447.0
+text = "   Volumen"
+valign = 3
+
+[node name="Music" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 451.0
+margin_right = 1024.0
+margin_bottom = 467.0
+size_flags_stretch_ratio = 0.0
+theme = ExtResource( 1 )
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

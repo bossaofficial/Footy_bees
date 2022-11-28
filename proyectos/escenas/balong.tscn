@@ -6,10 +6,11 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 57.1402
 
-[node name="Balong" type="RigidBody2D"]
+[node name="Balong" type="RigidBody2D" groups=["Balon"]]
 collision_layer = 9
 mass = 65535.0
 gravity_scale = 0.0
+continuous_cd = 1
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
