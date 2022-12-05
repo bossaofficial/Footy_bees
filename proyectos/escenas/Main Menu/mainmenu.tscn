@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://recursos/tema.tres" type="Theme" id=1]
 [ext_resource path="res://assets/TrueType (.ttf)/Blazma-Italic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://proyectos/escenas/Main Menu/mainmenu.gd" type="Script" id=3]
+[ext_resource path="res://10172439_17938267.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/Bee-Sheet.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -13,6 +15,7 @@ font_data = ExtResource( 2 )
 [node name="MarginContainer" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -293, -94 )
 script = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -47,3 +50,31 @@ margin_top = 210.0
 margin_right = 1024.0
 margin_bottom = 263.0
 text = "SALIR"
+
+[node name="1017243917938267" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 416, 185 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Bee-Sheet" type="Sprite" parent="."]
+position = Vector2( 159.25, 113.25 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+hframes = 16
+
+[node name="Bee-Sheet2" type="Sprite" parent="."]
+position = Vector2( 835, 505 )
+texture = ExtResource( 5 )
+hframes = 16
+
+[node name="Bee-Sheet3" type="Sprite" parent="."]
+position = Vector2( 126, 500 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+hframes = 16
+
+[node name="Bee-Sheet4" type="Sprite" parent="."]
+position = Vector2( 884, 102 )
+texture = ExtResource( 5 )
+hframes = 16

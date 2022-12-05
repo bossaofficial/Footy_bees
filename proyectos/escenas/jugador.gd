@@ -69,6 +69,8 @@ func _ready():
 		sprite.modulate= Color.pink
 	tiempo_balong.connect("timeout", self, "_on_tiempo_balong_timeout")
 	cooldown.connect("timeout", self, "_on_cooldown_timeout")
+	if has_balong == true:
+		on_balong_relantizacion()
 
 func _on_tiempo_balong_timeout():
 	has_balong = false
@@ -79,3 +81,7 @@ func _on_tiempo_balong_timeout():
 
 func _on_cooldown_timeout():
 	has_cooldown = false
+
+func on_balong_relantizacion():
+	SPEED = 100
+	SPEEDY = 100
